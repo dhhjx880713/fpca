@@ -61,3 +61,20 @@ def convert_quat_functional_data_to_cartesian_functional_data(elementary_action,
         cartesian_spline = quat_spline.to_cartesian()
         cartesian_coeffs_mat.append(cartesian_spline.coeffs)
     return np.asarray(cartesian_coeffs_mat)
+
+
+def scale_root_channels(motion_data):
+    '''
+    normalized root channels for motion data matrix
+    :param motion_data (numpy.narray<3d>): n_samples * n_frames * n_dims
+    :return:
+    '''
+    motion_data = copy.deepcopy(motion_data)
+    max_x = np.max(np.abs(motion_data[:, :, 0]))
+    max_y = np.max(np.abs(motion_data[:, :, 1]))
+    max_z = np.max(np.abs(motion_data[:, :, 2]))
+    motion_data[:, :, 0] /= max_x
+    motion_data[:, :, 1] /= max_y
+    motion_data[:, :, 2] /= max_z
+    scale_root_vector = [max_x, max_y, max_z]
+    return motion_data, scale_root_vector

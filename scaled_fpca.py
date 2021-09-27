@@ -3,12 +3,12 @@ import numpy as np
 from .objective_functions import sfpca_objective_func
 from . import LEN_QUAT, LEN_CARTESIAN
 from sklearn.decomposition import PCA
-from morphablegraphs.animation_data import BVHReader, SkeletonBuilder
+from mosi_utils_anim.animation_data import BVHReader, SkeletonBuilder
 import time
 import os
 from scipy.optimize import minimize
-from morphablegraphs.utilities import write_to_json_file, get_data_analysis_folder, load_json_file
-from morphablegraphs.motion_analysis.prepare_data import scale_root_channels, reshape_data_for_PCA,\
+from mosi_utils_anim.utilities import write_to_json_file, get_data_analysis_folder, load_json_file
+from .prepare_data import scale_root_channels, reshape_data_for_PCA,\
                                                          convert_quat_functional_data_to_cartesian_functional_data, \
                                                          reshape_2D_data_to_motion_data
 import copy
