@@ -4,7 +4,7 @@ Created on Jan 14, 2015
 @author: hadu01
 '''
 import numpy as np
-from ...external.PCA import Center, PCA
+from .PCA import Center, PCA
 import scipy.interpolate as si
 from .functional_data import FunctionalData
 

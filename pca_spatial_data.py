@@ -1,7 +1,7 @@
 # encoding: UTF-8
 import numpy as np
 import copy
-from ...external.PCA import *
+from .PCA import *
 
 
 class PCASpatialData(object):

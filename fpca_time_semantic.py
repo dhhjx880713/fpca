@@ -2,7 +2,7 @@
 import json
 import numpy as np
 import scipy.interpolate as si
-from ...external.PCA import Center, PCA
+from .PCA import Center, PCA
 
 
 class FPCATimeSemantic(object):

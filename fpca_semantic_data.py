@@ -3,7 +3,7 @@ import json
 import os
 import scipy.interpolate as si
 import numpy as np
-from ...external.PCA import Center, PCA
+from .PCA import Center, PCA
 
 class FPCASemanticData():
     def __init__(self):

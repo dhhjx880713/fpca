@@ -92,12 +92,6 @@ class ScaledFunctionalPCA(object):
                           method='L-BFGS-B',
                           options={'maxiter': 1e5})
 
-        # result = minimize(sfpca_objective_func,
-        #                   self.weight_vec,
-        #                   args=(data,),
-        #                   bounds=bnds,
-        #                   method="SLSQP",
-        #                   options={'maxiter': 1e3})
         running_time = time.clock() - start_time
         print('optimization time: ', running_time)
         print('new weights: ', result.x)

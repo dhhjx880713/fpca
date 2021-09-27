@@ -1,8 +1,8 @@
 # encoding: UTF-8
 import numpy as np
 import scipy.interpolate as si
-from ..utils import get_cubic_b_spline_knots
-from ...motion_model.motion_spline import MotionSpline
+from .utils import get_cubic_b_spline_knots
+from .motion_spline import MotionSpline
 
 
 class FunctionalData(object):

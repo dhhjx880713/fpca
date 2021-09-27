@@ -40,7 +40,6 @@ class SFPCASpatialData(object):
         for i in range(n_joints):
             extended_weights[3 + i*4 : 3 + (i+1)*4] = self.feature_weights[3 + i]
         weight_mat = np.diag(extended_weights)
-        weighted_quat_sample_data = np.dot(smoothed_quat_frames_data, weight_mat)
         self.fpcaobj = PCAFunctionalData(motion_data,
                                          n_basis=self.n_basis,
                                          fraction=self.fraction,
