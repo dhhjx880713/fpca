@@ -1,0 +1,11 @@
+*.pyc
+*.pickle
+*.spyderproject
+*.spyderworkspace
+*.idea
+*.html
+*.index
+*.meta
+*.data-00000-of-00001
+*.gz
+*.bin
