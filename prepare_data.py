@@ -1,7 +1,6 @@
 import numpy as np
 
 
-
 def reshape_data_for_PCA(data_mat):
     data_mat = np.asarray(data_mat)
     assert len(data_mat.shape) == 3

@@ -6,17 +6,17 @@ Created on Sun Aug 02 13:15:01 2015
 """
 
 import numpy as np
-from ...external.transformations import quaternion_multiply
+from transformations import quaternion_multiply
 from .fpca_temporal_data import FPCATemporalData
 from .fpca_spatial_data import FPCASpatialData
 from .pca_spatial_data import PCASpatialData
 from .functional_data import FunctionalData
-from ..utils import get_data_analysis_folder
-from ...utilities import load_json_file, write_to_json_file
-from ...animation_data import BVHReader
-from ...animation_data.utils import convert_euler_frames_to_reduced_euler_frames, \
+from mosi_utils_anim.utilities.io_helper_functions import get_data_analysis_folder
+from mosi_utils_anim.utilities import load_json_file, write_to_json_file
+from mosi_utils_anim.animation_data import BVHReader
+from mosi_utils_anim.animation_data.utils import convert_euler_frames_to_reduced_euler_frames, \
                                            convert_euler_frames_to_quaternion_frames
-from ...utilities.custom_math import areQuatClose, diff_quat, quat_to_logmap, normalize_quaternion, logmap_to_quat
+from mosi_utils_anim.utilities.custom_math import areQuatClose, diff_quat, quat_to_logmap, normalize_quaternion, logmap_to_quat
 from collections import OrderedDict
 import os
 import json
